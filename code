@@ -1,6 +1,6 @@
 import random
 
-# Predefined responses and keywords
+
 greetings = ["hello", "hi", "hey", "greetings", "what's up"]
 farewells = ["bye", "goodbye", "see you", "later", "farewell"]
 questions = {
@@ -10,14 +10,14 @@ questions = {
 }
 default_responses = ["I'm sorry, I don't understand that. Can you rephrase?", "Could you clarify that?", "I didn't quite catch that."]
 
-# Function to check if the user input matches any of the keywords in a list
+
 def match_keywords(user_input, keywords):
     for word in keywords:
         if word in user_input.lower():
             return True
     return False
 
-# Function to generate a response based on user input
+
 def generate_response(user_input):
     if match_keywords(user_input, greetings):
         return random.choice(["Hi there!", "Hello!", "Hey!", "Greetings!", "What's up?"])
